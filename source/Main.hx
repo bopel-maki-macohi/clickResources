@@ -42,9 +42,11 @@ class Main extends Sprite
 
 		savedata ??= {
 			centerBlockTier: null,
+			inventory: null,
 		};
 
 		savedata.centerBlockTier ??= CenterBlockTier.TIER_OVERWORLD;
 		Reflect.deleteField(savedata, 'version');
+		savedata.inventory ??= [];
 	}
 }
