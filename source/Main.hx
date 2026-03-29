@@ -36,20 +36,14 @@ class Main extends Sprite
 		addChild(new FlxGame(0, 0, PlayState));
 	}
 
-	public static final VERSION:Int = 2;
-
 	public function initalizeSave()
 	{
 		FlxG.save.bind('clickResources', Application.current.meta.get('company'));
 
 		savedata ??= {
-			version: 0,
 			centerBlockTier: null,
 		};
 
-		if (savedata.version < 2)
-			savedata.centerBlockTier ??= CenterBlockTier.TIER_OVERWORLD;
-
-		savedata.version = VERSION;
+		savedata.centerBlockTier ??= CenterBlockTier.TIER_OVERWORLD;
 	}
 }
