@@ -2,5 +2,5 @@ import CenterBlockTiers.CenterBlockTier;
 
 typedef SaveData =
 {
-	centerBlockTier:CenterBlockTier,
+	centerBlockTier:Null<CenterBlockTier>,
 }

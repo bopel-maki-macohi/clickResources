@@ -45,5 +45,6 @@ class Main extends Sprite
 		};
 
 		savedata.centerBlockTier ??= CenterBlockTier.TIER_OVERWORLD;
+		Reflect.deleteField(savedata, 'version');
 	}
 }
