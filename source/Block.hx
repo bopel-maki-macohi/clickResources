@@ -1,10 +1,17 @@
+import flixel.util.FlxColor;
 import flixel.FlxG;
 import flixel.util.FlxSignal;
 import flixel.FlxSprite;
 
 class Block extends FlxSprite
 {
-	public var block:String;
+	public var block(default, set):String;
+
+	function set_block(b:String)
+	{
+		makeGraphic(16, 16, FlxColor.WHITE);
+		return b;
+	}
 
 	public var onClick:FlxSignal;
 
