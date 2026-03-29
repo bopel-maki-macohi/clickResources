@@ -33,6 +33,8 @@ class Main extends Sprite
 
 		initalizeSave();
 
+		trace('Save: ${savedata}');
+
 		addChild(new FlxGame(0, 0, PlayState));
 	}
 
