@@ -1,1 +1,4 @@
-typedef SaveData = {}
+typedef SaveData =
+{
+	version:Int,
+}

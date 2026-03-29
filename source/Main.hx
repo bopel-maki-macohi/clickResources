@@ -24,14 +24,25 @@ class Main extends Sprite
 		return data;
 	}
 
+	public static final VERSION:Int = 1;
+
 	public function new()
 	{
 		super();
 
-		FlxG.save.bind('clickResources', Application.current.meta.get('company'));
-
-		savedata ??= {};
+		initalizeSave();
 
 		addChild(new FlxGame(0, 0, PlayState));
+	}
+
+	public function initalizeSave()
+	{
+		FlxG.save.bind('clickResources', Application.current.meta.get('company'));
+
+		savedata ??= {
+			version: VERSION
+		};
+
+		savedata.version = VERSION;
 	}
 }
