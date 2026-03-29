@@ -1,5 +1,6 @@
 package;
 
+import CenterBlockTiers.CenterBlockTier;
 import lime.app.Application;
 import flixel.FlxG;
 import flixel.FlxGame;
@@ -40,7 +41,8 @@ class Main extends Sprite
 		FlxG.save.bind('clickResources', Application.current.meta.get('company'));
 
 		savedata ??= {
-			version: VERSION
+			version: VERSION,
+			centerBlockTier: CenterBlockTier.TIER_OVERWORLD
 		};
 
 		savedata.version = VERSION;

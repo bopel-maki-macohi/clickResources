@@ -9,7 +9,7 @@ class Block extends FlxSprite
 
 	function set_block(b:String)
 	{
-		makeGraphic(16, 16, FlxColor.WHITE);
+		makeGraphic(64, 64, FlxColor.WHITE);
 		return b;
 	}
 
