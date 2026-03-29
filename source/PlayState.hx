@@ -24,5 +24,8 @@ class PlayState extends FlxState
 		inventoryText.onClick.add(() -> FlxG.switchState(() -> new InventoryState()));
 	}
 
-	public function centerBlockClick() {}
+	public function centerBlockClick()
+	{
+		CenterBlockTiers.getItems(FlxG.random.int(1, 3), Main.savedata.centerBlockTier.blocks);
+	}
 }
