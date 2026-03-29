@@ -4,5 +4,5 @@ typedef SaveData =
 {
 	centerBlockTier:Null<CenterBlockTier>,
 
-	inventory:Array<String>,
+	inventory:Inventory,
 }

@@ -48,5 +48,14 @@ class Main extends Sprite
 		savedata.centerBlockTier ??= CenterBlockTier.TIER_OVERWORLD;
 		Reflect.deleteField(savedata, 'version');
 		savedata.inventory ??= [];
+
+		var countedItem:Array<String> = [];
+		for (item in savedata.inventory)
+		{
+			if (countedItem.contains(item)) continue;
+
+			countedItem.push(item);
+			trace('inventory: ' + savedata.inventory.getCountOfItem(item) + ' ${item}(s)');
+		}
 	}
 }
