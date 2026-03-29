@@ -11,6 +11,6 @@ class InventoryState extends FlxState
 
 		backText.screenCenter(X);
 		add(backText);
-		backText.onClick.add(() -> FlxG.switchState(() -> new InventoryState()));
+		backText.onClick.add(() -> FlxG.switchState(() -> new PlayState()));
 	}
 }
